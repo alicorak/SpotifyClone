@@ -4,11 +4,11 @@ const styles = StyleSheet.create({
   container: {
     width: 160,
     height: 160,
-    margin: 10
+    margin: 10,
   },
   text: {
     color: "grey",
-    marginTop: 10
+    marginTop: 10,
   },
   image: {
     width: "100%",
