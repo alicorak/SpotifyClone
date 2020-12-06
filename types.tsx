@@ -8,10 +8,12 @@ export type BottomTabParamList = {
   Search: undefined;
   YourLibrary: undefined;
   Premium: undefined;
+
 };
 
 export type HomeParamList = {
   HomeScreen: undefined;
+  AlbumScreen: undefined;
 };
 
 export type SearchParamList = {

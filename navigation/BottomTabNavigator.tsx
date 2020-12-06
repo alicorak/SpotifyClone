@@ -1,5 +1,4 @@
 import {
-  Ionicons,
   Foundation,
   Feather,
   MaterialCommunityIcons,
@@ -11,10 +10,17 @@ import * as React from "react";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import HomeScreen from "../screens/HomeScreen";
+import AlbumScreen from "../screens/AlbumScreen";
 import PremiumScreen from "../screens/PremiumScreen";
 import SearchScreen from "../screens/SearchScreen";
 import YourLibraryScreen from "../screens/YourLibraryScreen";
-import { BottomTabParamList, HomeParamList, SearchParamList, YourLibraryParamList, PremiumParamList } from "../types";
+import {
+  BottomTabParamList,
+  HomeParamList,
+  SearchParamList,
+  YourLibraryParamList,
+  PremiumParamList,
+} from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -86,12 +92,6 @@ export default function BottomTabNavigator() {
   );
 }
 
-// You can explore the built-in icon families and icons on the web at:
-// https://icons.expo.fyi/
-function TabBarIcon(props: { name: string; color: string }) {
-  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
-}
-
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
 const HomeStack = createStackNavigator<HomeParamList>();
@@ -103,6 +103,12 @@ function HomeNavigator() {
         name="HomeScreen"
         component={HomeScreen}
         options={{ headerTitle: "Home Screen Title" }}
+      />
+
+      <HomeStack.Screen
+        name="AlbumScreen"
+        component={AlbumScreen}
+        options={{ headerTitle: "Album Screen Title" }}
       />
     </HomeStack.Navigator>
   );
